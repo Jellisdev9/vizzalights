@@ -1,2 +1,6 @@
 # dev-notes stub (real content lives in ~/dev-notes/vizzalights/, not synced here)
 CLAUDE.md
+
+node_modules
+dist
+.DS_Store
