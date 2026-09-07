@@ -617,19 +617,19 @@ button {
   isolation: isolate;
 }
 
-.gallery-tile .scene {
+.gallery-tile img {
   position: absolute;
   inset: 0;
-  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.94) saturate(1.05);
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 
-.gallery-tile .scene svg {
-  position: absolute;
-  bottom: 4%;
-  left: 6%;
-  right: 6%;
-  width: 88%;
-  height: auto;
+.gallery-tile:hover img {
+  transform: scale(1.05);
+  filter: brightness(1) saturate(1.1);
 }
 
 .gallery-caption {
@@ -637,8 +637,8 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 30px 14px 12px;
-  background: linear-gradient(180deg, transparent, rgba(3, 4, 8, 0.85));
+  padding: 34px 14px 12px;
+  background: linear-gradient(180deg, transparent, rgba(3, 4, 8, 0.9) 70%);
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -653,6 +653,12 @@ button {
 .gallery-caption-sub {
   font-size: 0.74rem;
   color: var(--text-lo);
+}
+
+.gallery-credit {
+  font-size: 0.62rem;
+  color: rgba(247, 245, 240, 0.4);
+  margin-top: 3px;
 }
 
 /* ---------- Stat bar ---------- */
