@@ -609,14 +609,50 @@ button {
 }
 
 .gallery-tile {
-  aspect-ratio: 4 / 5;
+  position: relative;
+  aspect-ratio: 4 / 3;
   border-radius: 14px;
-  border: 1px dashed rgba(255, 255, 255, 0.18);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  isolation: isolate;
+}
+
+.gallery-tile .scene {
+  position: absolute;
+  inset: 0;
+  border-radius: 0;
+}
+
+.gallery-tile .scene svg {
+  position: absolute;
+  bottom: 4%;
+  left: 6%;
+  right: 6%;
+  width: 88%;
+  height: auto;
+}
+
+.gallery-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px 14px 12px;
+  background: linear-gradient(180deg, transparent, rgba(3, 4, 8, 0.85));
   display: flex;
-  align-items: flex-end;
-  padding: 14px;
-  font-size: 0.76rem;
-  color: rgba(255, 255, 255, 0.6);
+  flex-direction: column;
+  gap: 2px;
+}
+
+.gallery-caption-title {
+  font-family: var(--serif);
+  font-size: 0.92rem;
+  color: var(--text-hi);
+}
+
+.gallery-caption-sub {
+  font-size: 0.74rem;
+  color: var(--text-lo);
 }
 
 /* ---------- Stat bar ---------- */
