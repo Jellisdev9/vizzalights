@@ -24,7 +24,7 @@ export default function Footer() {
               <h4>Contact</h4>
               <ul>
                 <li>Jacksonville, FL</li>
-                <li>hello@vizzalights.com</li>
+                <li><a href="mailto:hello@vizzalights.com">hello@vizzalights.com</a></li>
               </ul>
             </div>
           </div>
